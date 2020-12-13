@@ -1,0 +1,25 @@
+{
+  "name": "houdini-noise",
+  "version": "0.0.1",
+  "description": "CSS Houdini PaintWorklet for background noise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jh3y/houdini-noise.git"
+  },
+  "keywords": [
+    "CSS",
+    "Houdini",
+    "Worklet",
+    "PaintWorklet"
+  ],
+  "author": "Jhey Tompkins <jh3y@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jh3y/houdini-noise/issues"
+  },
+  "homepage": "https://github.com/jh3y/houdini-noise#readme"
+}
