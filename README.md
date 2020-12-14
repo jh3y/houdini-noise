@@ -1,5 +1,7 @@
 # houdini-noise
 
+![houdini noise used on a button](https://user-images.githubusercontent.com/842246/102114384-077f4400-3e32-11eb-96d5-c5b6aa1aa4cc.png)
+
 A CSS Houdini Worklet to paint HSL powered background noise.
 
 ## Getting started
