@@ -1,6 +1,6 @@
 {
   "name": "houdini-noise",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CSS Houdini PaintWorklet for background noise",
   "main": "dist/worklet.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "url": "https://github.com/jh3y/houdini-noise/issues"
   },
   "homepage": "https://github.com/jh3y/houdini-noise#readme",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "autoprefixer": "^10.1.0",
