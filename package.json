@@ -1,6 +1,6 @@
 {
   "name": "houdini-noise",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CSS Houdini PaintWorklet for background noise",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/jh3y/houdini-noise.git"
   },
+  "files": [
+    "dist/*",
+    "README.md"
+  ],
   "keywords": [
     "CSS",
     "Houdini",
@@ -21,5 +25,15 @@
   "bugs": {
     "url": "https://github.com/jh3y/houdini-noise/issues"
   },
-  "homepage": "https://github.com/jh3y/houdini-noise#readme"
+  "homepage": "https://github.com/jh3y/houdini-noise#readme",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "autoprefixer": "^10.1.0",
+    "browser-sync": "^2.26.13",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.8"
+  }
 }

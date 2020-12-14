@@ -1,0 +1,81 @@
+// This is where we use the custom properties
+@property --noise-trip {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@keyframes scale {
+  0%, 100% {
+    --noise-trip: 0;
+  }
+  50% {
+    --noise-trip: var(--noise-variance);
+  }
+}
+
+@supports (background: paint(something)) {
+  .wand {
+    /*
+      Optionally set property values.
+      This can be done at root or local scope
+    */
+    --noise: var(--noise-trip); /* Animated noise with property, hack to animate? */
+    --noise-cell-size: 1;
+    --noise-hue: 330;
+    --noise-saturation: 100;
+    --noise-lightness: 0 80;
+    --noise-variance: 10000;
+    background: paint(noise);
+  }
+
+  .wand:active {
+    animation: scale 5s infinite linear;
+  }
+}
+
+// Additional Styling
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  background-color: hsl(0, 0%, 5%);
+}
+
+.wand {
+  --lightness: 50;
+  --spread: 10;
+  border: 0;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  outline: transparent;
+  box-shadow: '0 0px %s 0 hsl(0, 0%, calc(var(--lightness) * 1%));' % (calc(var(--spread) * 1px) calc(var(--lightness) * 1%))
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+
+.wand:hover {
+  --lightness: 100;
+}
+
+.wand:active {
+  --spread: 0;
+  transform: scale(0.99);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
