@@ -1,8 +1,8 @@
 {
   "name": "houdini-noise",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CSS Houdini PaintWorklet for background noise",
-  "main": "index.js",
+  "main": "dist/worklet.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
