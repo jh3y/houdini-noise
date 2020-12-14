@@ -1,12 +1,5 @@
 import { GUI } from 'https://cdn.skypack.dev/dat.gui'
 ;(async function () {
-  if (CSS['paintWorklet'] === undefined) {
-    console.info('IMporting')
-    await import(
-      'https://unpkg.com/css-paint-polyfill/dist/css-paint-polyfill.js'
-    )
-  }
-
   CSS.registerProperty({
     name: '--noise',
     syntax: '<number>',
@@ -24,13 +17,13 @@ import { GUI } from 'https://cdn.skypack.dev/dat.gui'
   CSS.paintWorklet.addModule(`/worklet.js`)
 
   const CONFIG = {
-    SIZE: 2,
-    HUE_LOWER: 0,
-    HUE_UPPER: 360,
-    SATURATION_LOWER: 0,
-    SATURATION_UPPER: 100,
-    LIGHTNESS_LOWER: 0,
-    LIGHTNESS_UPPER: 100,
+    SIZE: 5,
+    HUE_LOWER: 180,
+    HUE_UPPER: 280,
+    SATURATION_LOWER: 20,
+    SATURATION_UPPER: 80,
+    LIGHTNESS_LOWER: 10,
+    LIGHTNESS_UPPER: 50,
   }
   const WAND = document.querySelector('.wand')
 
@@ -61,4 +54,7 @@ import { GUI } from 'https://cdn.skypack.dev/dat.gui'
   const LIG = CONTROLLER.addFolder('Lightness')
   LIG.add(CONFIG, 'LIGHTNESS_LOWER', 0, 100, 1).name('Lower').onChange(UPDATE)
   LIG.add(CONFIG, 'LIGHTNESS_UPPER', 0, 100, 1).name('Upper').onChange(UPDATE)
+
+  // Trick to get Firefox to render
+  UPDATE()
 })()
